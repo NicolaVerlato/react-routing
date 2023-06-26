@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 function Home(params) {
     return(
         <div>
             ciao<br/>
-            <a href="/products">prodotti</a>
+            <Link to="/products">prodotti</Link>
         </div>
     )
 }
