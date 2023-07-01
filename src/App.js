@@ -2,6 +2,7 @@ import {createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home';
 import Products from './components/Products';
 import Root from './components/Root';
+import ProductDetails from './components/ProductDetail';
 
 // const routeDefinition = createRoutesFromElements(
 //   <Route>
@@ -17,8 +18,9 @@ const router = createBrowserRouter([
     path: '/', 
     element: <Root />,
     children: [
-      {path: '/', element: <Home />},
-      {path: '/products', element: <Products />}
+      {index: true, element: <Home />},
+      {path: '/products', element: <Products />},
+      {path: '/products/:id', element: <ProductDetails />}
     ]
   },
 ])
